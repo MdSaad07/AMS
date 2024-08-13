@@ -1,34 +1,11 @@
-// components/LoginForm.js
-import { useClient } from 'next/data-client';
+import React from 'react'
 
-const LoginForm = () => {
-  const [email, setEmail] = useClient('');
-  const [password, setPassword] = useClient('');
-
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    // Handle login logic here
-  };
-
+function LoginForm() {
   return (
-    <form onSubmit={handleSubmit}>
-      <label>Email:</label>
-      <input
-        type="email"
-        value={email}
-        onChange={(e) => setEmail(e.target.value)}
-        required
-      />
-      <label>Password:</label>
-      <input
-        type="password"
-        value={password}
-        onChange={(e) => setPassword(e.target.value)}
-        required
-      />
-      <button type="submit">Login</button>
-    </form>
-  );
-};
+    <div>
+      <h1>Login Form</h1>
+    </div>
+  )
+}
 
-export default LoginForm;
+export default LoginForm
